@@ -20,6 +20,9 @@ app.use(express.urlencoded({
 // parse incoming JSON data
 app.use(express.json()); //takes incoming POST data in the form of JSON and parses it into the req.body
 
+// make files readily available
+app.use(express.static('public'));
+
 const {
     animals
 } = require('./data/animals') //animals is a property containing an array
@@ -126,6 +129,18 @@ app.get('/api/animals/:id', (req, res) => {
     } else {
         res.send(404);
     }
+});
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.get('/animals', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/animals.html'));
+});
+
+app.get('/zookeepers', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/zookeepers.html'));
 });
 
 // client requests server to accept the data
