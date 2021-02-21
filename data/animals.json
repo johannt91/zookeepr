@@ -117,24 +117,6 @@
         "hungry"
       ],
       "id": "11"
-    },
-    {
-      "name": "Dingo",
-      "species": "animal",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "zany"
-      ],
-      "id": "12"
-    },
-    {
-      "name": "Dingo",
-      "species": "Animal",
-      "diet": "carnivore",
-      "personalityTraits": [
-        "hungry"
-      ],
-      "id": "13"
     }
   ]
 }
